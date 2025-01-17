@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background: #555;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TANYA MISHRA</h1>
+        <p>Discover My Creations</p>
+    </header>
+
+    <nav>
+        <a href="#home" class="nav-link active" onclick="showSection('home')">Home</a>
+        <a href="#about" class="nav-link" onclick="showSection('about')">About</a>
+        <a href="#education" class="nav-link" onclick="showSection('education')">Qualifications</a>
+        <a href="#skills" class="nav-link" onclick="showSection('skills')">Skills</a>
+        <a href="#projects" class="nav-link" onclick="showSection('projects')">Projects</a>
+        <a href="#contact" class="nav-link" onclick="showSection('contact')">Contact</a>
+    </nav>
+
+    <!-- Sections -->
+    <div id="home" class="container">
+        <img src="TANYA.jpg" alt="Tanya Mishra" style="width: 30%; border-radius: 10px;">
+        
+    </div>
+
+    <div id="about" class="container hidden" color:blue;>
+        <h1>About Me</h1>
+        <p>I'm Tanya Mishra, a tech enthusiast with a passion for coding. My goal is to combine creativity and functionality to create impactful designs and user experiences.<br>
+        Outside of work, I enjoy content writing. Feel free to explore my portfolio.</p>
+    </div>
+
+    <div id="education" class="container hidden">
+        <h1>Qualifications</h1>
+        <div class="grid">
+            <div class="card">
+                <img src="kv1.jpg" alt="School">
+                <h3>10th CLASS</h3>
+                <p>PERCENTAGE: 93%</p>
+            </div>
+            <div class="card">
+                <img src="kv1.jpg" alt="School">
+                <h3>12th CLASS</h3>
+                <p>PERCENTAGE: 94%</p>
+            </div>
+            <div class="card">
+                <img src="college.jpg" alt="College">
+                <h3>B.Tech (1st Year)</h3>
+                <p>CGPA: 9.33</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills" class="container hidden">
+        <h1>Skills</h1>
+        <p>Languages: C, C++, HTML, CSS, JavaScript</p>
+        <p>Web Technologies: Bootstrap, Node.js</p>
+        <p>Version Controls: Git, GitHub</p>
+    </div>
+
+    <div id="projects" class="container hidden">
+        <h1>Projects</h1>
+        <p>Designed a tic-tac-toe game using HTML, CSS, and JavaScript. Used GitHub for version control and deployment.</p>
+    </div>
+
+    <div id="contact" class="container hidden">
+        <h1>Contact Me</h1>
+        <p>Email: <a href="mailto:ece24153@iiitkalyani.ac.in">ece24153@iiitkalyani.ac.in</a></p>
+        <p>Phone: <a href="tel:+916306585950">+91 6306585950</a></p>
+        <p>GitHub: <a href="https://github.com/Tanya-Mshra">https://github.com/Tanya-Mshra</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/tanya-mishra-537052327">https://www.linkedin.com/in/tanya-mishra-537052327</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Portfolio Website. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.container');
+            sections.forEach(section => section.classList.add('hidden'));
+
+            document.getElementById(sectionId).classList.remove('hidden');
+
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
+            activeLink.classList.add('active');
+        }
+    </script>
+</body>
+</html>
